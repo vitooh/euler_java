@@ -18,9 +18,17 @@ public class EulerPrime {
 	}
 	
 	public static void main(final String[] args) {
-		
+		System.out.println(lowestFactor(137));
+		System.out.println(largestPrimeFactor(137));
 	}
 	
+	static int lowestFactor(int i) {
+		for (int j = 2; j < i/2; j++) {
+			if (i % j == 0) return j;
+		}
+		return 1;
+	}
+
 	static long nextPrime(long j) {
 		while (true) {
 			j++;
@@ -35,4 +43,5 @@ public class EulerPrime {
 		return new LargestPrimeFactor_p03(a).result;
 	}
 	
+
 }

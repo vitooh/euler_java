@@ -7,6 +7,12 @@ import org.junit.Test;
 public class EulerTests {
 	
 	@Test
+	public void testP01() {
+		assertEquals(23, new Multiplesof3and5_p01(10).result);
+		assertEquals(233168, new Multiplesof3and5_p01(1000).result);
+	}
+	
+	@Test
 	public void testP03() {
 		assertEquals(29, new LargestPrimeFactor_p03(13195).result);
 		assertEquals(6857, new LargestPrimeFactor_p03(600851475143L).result);
@@ -56,7 +62,7 @@ public class EulerTests {
 	public void testP55() {
 		final LychrelNumbers55 test = new LychrelNumbers55();
 		final String[] args = null;
-		test.main(args);
+		LychrelNumbers55.main(args);
 		assertEquals(249, LychrelNumbers55.result);
 	}
 	
@@ -66,10 +72,12 @@ public class EulerTests {
 		assertEquals(true, EulerPrime.isPrime(11L));
 		assertEquals(true, EulerPrime.nextPrime(11) == 13);
 		assertEquals(true, EulerPrime.largestPrimeFactor(13195) == 29);
+		System.out.println(EulerPrime.isPrime(227));
 	}
 	
 	@Test
 	public void testEulerString() {
 		
 	}
+	
 }
