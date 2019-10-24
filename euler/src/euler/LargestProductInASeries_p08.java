@@ -33,10 +33,10 @@ public class LargestProductInASeries_p08 {
 	}
 	
 	private void getTokensFromFile() {
-		final File file = new File("C:\\Users\\witold.suryjak\\Documents\\workspace-spring-tool-suite-4-4.0.1.RELEASE\\euler\\euler_java.git\\trunk\\euler\\src\\euler\\1000digints_p08.txt");
-		Scanner sc = null;
+		File file = new File("./euler/src/euler/1000digints_p08.txt");
 		try {
-			sc = new Scanner(file);
+			
+			Scanner sc = new Scanner(file);
 			
 			final StringBuilder theBigNumberBuilder = new StringBuilder();
 			while (sc.hasNext()) {

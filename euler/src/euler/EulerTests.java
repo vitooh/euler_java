@@ -2,6 +2,8 @@ package euler;
 
 import static org.junit.Assert.assertEquals;
 
+import java.math.BigInteger;
+
 import org.junit.Test;
 
 public class EulerTests {
@@ -10,6 +12,12 @@ public class EulerTests {
 	public void testP01() {
 		assertEquals(23, new Multiplesof3and5_p01(10).result);
 		assertEquals(233168, new Multiplesof3and5_p01(1000).result);
+	}
+	
+	
+	@Test
+	public void testP02() {
+		assertEquals(new BigInteger("4613732"), new EvenFibonacciNumbers_p02().result);
 	}
 	
 	@Test

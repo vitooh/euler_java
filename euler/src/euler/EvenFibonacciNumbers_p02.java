@@ -4,7 +4,13 @@ import java.math.BigInteger;
 
 public class EvenFibonacciNumbers_p02 {
 	
-	public static void main(final String[] args) {
+	BigInteger result;
+	
+	EvenFibonacciNumbers_p02() {
+		main_old(null);
+	}
+	
+	public void main_old(final String[] args) {
 		BigInteger result = BigInteger.ZERO;
 		BigInteger currentFibo = BigInteger.ONE;
 		BigInteger previousFibo = BigInteger.ONE;
@@ -17,14 +23,13 @@ public class EvenFibonacciNumbers_p02 {
 			previousFibo = temp;
 		}
 		System.out.print(result);
+		this.result = result;
 	}
 	
 	static BigInteger nextFibo(final BigInteger previousFibo, final BigInteger currentFibo) {
 		if (currentFibo.equals(BigInteger.valueOf(1L))) {
 			return BigInteger.valueOf(2L);
 		}
-		return previousFibo.add(currentFibo);
-		
+		return previousFibo.add(currentFibo);		
 	}
-	
 }
