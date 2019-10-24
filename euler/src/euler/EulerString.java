@@ -1,5 +1,7 @@
 package euler;
 
+import java.math.BigInteger;
+
 public class EulerString {
 	
 	public static void main(final String[] args) {
@@ -29,6 +31,10 @@ public class EulerString {
 			}
 		}
 		return true;
+	}
+	
+	public static boolean isPalindrome(final BigInteger i) {
+		return isPalindrome(String.valueOf(i));
 	}
 	
 }

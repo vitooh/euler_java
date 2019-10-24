@@ -4,6 +4,8 @@ import java.math.BigInteger;
 
 public class LychrelNumbers55 {
 	
+	static int result;
+	
 	public static void main(final String[] args) {
 		int counter = 0;
 		for (int i = 10; i < 10000; i++) {
@@ -14,7 +16,7 @@ public class LychrelNumbers55 {
 		
 		System.out.println(counter);
 		System.out.println(new BigInteger("4994"));
-		
+		result = counter;
 	}
 	
 	private static String make_palindrom(final BigInteger i) {
@@ -42,13 +44,6 @@ public class LychrelNumbers55 {
 	
 	private static boolean is_palindrom(final BigInteger i) {
 		
-		final char[] array_i = String.valueOf(i).toCharArray();
-		for (int j = 0; j < array_i.length; j++) {
-			if (array_i[j] != array_i[array_i.length - 1 - j]) {
-				return false;
-			}
-		}
-		
-		return true;
+		return EulerString.isPalindrome(i);
 	}
 }
