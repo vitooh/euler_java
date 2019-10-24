@@ -9,7 +9,7 @@ public class EulerPrime {
 		if (i % 2 == 0) {
 			return false;
 		}
-		for (long j = 3; j < i / j; j += 2) {
+		for (long j = 3; j < i / j + 1; j += 2) {
 			if (i % j == 0) {
 				return false;
 			}
@@ -18,15 +18,7 @@ public class EulerPrime {
 	}
 	
 	public static void main(final String[] args) {
-		if (isPrime(11L)) {
-			System.out.println("isPrime seems to be working");
-		}
-		if (nextPrime(11) == 13) {
-			System.out.println("nextPrime seems to be working");
-		}
-		if (largestPrimeFactor(13195) == 29) {
-			System.out.println("largestPrimeFactor seems to be working");
-		}
+		
 	}
 	
 	static long nextPrime(long j) {
