@@ -24,6 +24,9 @@ public class EulerPrime {
 		if (nextPrime(11) == 13) {
 			System.out.println("nextPrime seems to be working");
 		}
+		if (largestPrimeFactor(13195) == 29) {
+			System.out.println("largestPrimeFactor seems to be working");
+		}
 	}
 	
 	static long nextPrime(long j) {
@@ -34,6 +37,10 @@ public class EulerPrime {
 			}
 			
 		}
+	}
+	
+	static long largestPrimeFactor(final long a) {
+		return new LargestPrimeFactor_p03(a).result;
 	}
 	
 }
