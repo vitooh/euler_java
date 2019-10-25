@@ -33,10 +33,10 @@ public class LargestProductInASeries_p08 {
 	}
 	
 	private void getTokensFromFile() {
-		File file = new File("./euler/src/euler/1000digints_p08.txt");
+		final File file = new File(EulerFile.findFilePath("./", "1000digints_p08.txt"));
 		try {
 			
-			Scanner sc = new Scanner(file);
+			final Scanner sc = new Scanner(file);
 			
 			final StringBuilder theBigNumberBuilder = new StringBuilder();
 			while (sc.hasNext()) {

@@ -2,7 +2,9 @@ package euler;
 
 public class LargeNonMersennePrime97 {
 	
-	public static void main(final String[] args) {
+	String result;
+	
+	LargeNonMersennePrime97() {
 		
 		final int[] lastTenDigits = new int[10];
 		
@@ -11,13 +13,16 @@ public class LargeNonMersennePrime97 {
 		}
 		
 		lastTenDigits[9] = 2;
+		final int power = 7830457;
 		
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i < power; i++) {
 			multiply(lastTenDigits, 2);
 		}
 		
+		multiply(lastTenDigits, 28433);
+		
 		for (final int i : lastTenDigits) {
-			System.out.print(i);
+			System.out.print(i + " ");
 		}
 		
 	}
@@ -29,13 +34,16 @@ public class LargeNonMersennePrime97 {
 		for (int j = 9; j > 0; j--) {
 			final int digit = lastTenDigits[j];
 			final int k = digit * i;
-			lastTenDigits[j] = k % 10;
+			lastTenDigits[j] = k % 10 + rest;
 			rest = k / 10;
-			if (j < 9) {
+			if (j < 0) {
 				
 			}
 		}
-		
+	}
+	
+	public static void main(final String[] args) {
+		new LargeNonMersennePrime97();
 	}
 	
 }

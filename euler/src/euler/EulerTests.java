@@ -1,6 +1,7 @@
 package euler;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 import java.math.BigInteger;
 
@@ -13,7 +14,6 @@ public class EulerTests {
 		assertEquals(23, new Multiplesof3and5_p01(10).result);
 		assertEquals(233168, new Multiplesof3and5_p01(1000).result);
 	}
-	
 	
 	@Test
 	public void testP02() {
@@ -84,8 +84,9 @@ public class EulerTests {
 	}
 	
 	@Test
-	public void testEulerString() {
-		
+	public void testEulerFile() {
+		final String path = EulerFile.findFilePath("./", "1000digints_p08.txt");
+		assertNotEquals(null, path);
 	}
 	
 }
